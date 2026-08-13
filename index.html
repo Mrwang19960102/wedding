@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>王少松 & 夏梦影 · 婚礼邀请函</title>
+<meta name="description" content="王少松与夏梦影诚挚邀请您见证我们的婚礼 · 2026年10月3日 · 河南登封">
+<style>
+  :root {
+    --bg: #FBF8F4;
+    --card: #FFFFFF;
+    --ink: #3F3A36;
+    --body: #5C554E;
+    --muted: #8D847A;
+    --rose: #C08B8B;
+    --rose-deep: #A56F6F;
+    --blush: #F5E9E6;
+    --line: #E9DFD5;
+    --gold: #B99B6B;
+    --serif-en: "Cormorant Garamond", "Palatino", Georgia, "Times New Roman", serif;
+    --serif-cn: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--serif-cn);
+    background: #EFE9E1;
+    color: var(--body);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--bg);
+    box-shadow: 0 0 60px rgba(63, 58, 54, 0.12);
+    overflow: hidden;
+  }
+
+  svg { display: block; }
+
+  /* ---------- 封面 ---------- */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    background:
+      radial-gradient(120% 60% at 50% 0%, rgba(240, 214, 206, 0.55) 0%, rgba(240, 214, 206, 0) 60%),
+      linear-gradient(175deg, #F7EDE7 0%, var(--bg) 42%, #F4EAE2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 72px 24px 84px;
+  }
+
+  .hero-frame {
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(185, 155, 107, 0.4);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .hero-frame::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(185, 155, 107, 0.22);
+    border-radius: 2px;
+  }
+
+  .hero-botanical { color: var(--rose); opacity: 0.85; margin-bottom: 26px; }
+
+  .hero-kicker {
+    font-family: var(--serif-en);
+    font-size: 13px;
+    letter-spacing: 0.44em;
+    text-indent: 0.44em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .hero-names-en {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-names-en .amp { color: var(--rose-deep); margin: 0 4px; }
+
+  .hero-names {
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    color: var(--body);
+  }
+
+  .hero-heart { margin: 26px auto 20px; width: 16px; height: 16px; color: var(--rose); }
+
+  .hero-date {
+    font-family: var(--serif-en);
+    font-size: 19px;
+    letter-spacing: 0.32em;
+    text-indent: 0.32em;
+    color: var(--rose-deep);
+  }
+
+  .hero-place {
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    color: var(--muted);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rose);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .scroll-hint svg { animation: float 2.2s ease-in-out infinite; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(7px); }
+  }
+
+  /* ---------- 通用 section ---------- */
+  section { padding: 64px 28px; text-align: center; }
+
+  .sec-kicker {
+    font-family: var(--serif-en);
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .sec-title {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .sec-divider { margin: 0 auto 36px; color: var(--rose); }
+
+  /* ---------- 邀请词 ---------- */
+  .words {
+    font-size: 15px;
+    line-height: 2.2;
+    letter-spacing: 0.06em;
+  }
+
+  .words p + p { margin-top: 14px; }
+
+  .words .sign {
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+  }
+
+  .floral-ring { margin: 0 auto 34px; color: var(--rose); }
+
+  /* ---------- 新人介绍 ---------- */
+  .couple-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    box-shadow: 0 10px 30px rgba(63, 58, 54, 0.06);
+  }
+
+  .monogram {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(90% 90% at 50% 10%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 55%),
+      linear-gradient(160deg, #F3E2DC 0%, #EBD8D2 55%, #E5CEC8 100%);
+  }
+
+  .monogram-letter {
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(165, 111, 111, 0.82);
+    letter-spacing: 0.06em;
+  }
+
+  .monogram-ring {
+    position: absolute;
+    width: 168px;
+    height: 168px;
+    border: 1px solid rgba(165, 111, 111, 0.35);
+    border-radius: 50%;
+  }
+
+  .monogram-ring::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px dashed rgba(165, 111, 111, 0.25);
+    border-radius: 50%;
+  }
+
+  .monogram-sprig {
+    position: absolute;
+    color: rgba(165, 111, 111, 0.55);
+  }
+
+  .monogram-sprig.tl { top: 14px; left: 14px; }
+  .monogram-sprig.br { bottom: 14px; right: 14px; transform: rotate(180deg); }
+
+  .couple-info { padding: 22px 20px 26px; }
+
+  .couple-name {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    color: var(--ink);
+  }
+
+  .couple-role {
+    font-family: var(--serif-en);
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin: 4px 0 12px;
+  }
+
+  .couple-quote {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* 爱情故事时间线 */
+  .story {
+    margin-top: 44px;
+    text-align: left;
+    position: relative;
+    padding-left: 26px;
+  }
+
+  .story::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--line);
+  }
+
+  .story-item { position: relative; padding-bottom: 26px; }
+  .story-item:last-child { padding-bottom: 0; }
+
+  .story-item::before {
+    content: "";
+    position: absolute;
+    left: -23.5px;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--rose);
+  }
+
+  .story-year {
+    font-family: var(--serif-en);
+    font-size: 17px;
+    letter-spacing: 0.12em;
+    color: var(--rose-deep);
+  }
+
+  .story-text { font-size: 14px; margin-top: 2px; }
+
+  /* ---------- 倒计时 ---------- */
+  .countdown-sec { background: linear-gradient(180deg, var(--bg) 0%, var(--blush) 50%, var(--bg) 100%); }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .cd-cell {
+    min-width: 68px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 6px 12px;
+    box-shadow: 0 8px 22px rgba(165, 111, 111, 0.08);
+  }
+
+  .cd-num {
+    font-family: var(--serif-en);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--rose-deep);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cd-label {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .countdown-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* ---------- 时间地点 ---------- */
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 34px 24px;
+    box-shadow: 0 10px 30px rgba(63, 58, 54, 0.06);
+  }
+
+  .info-date {
+    font-family: var(--serif-en);
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.08em;
+  }
+
+  .info-date-cn {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+  }
+
+  .info-line {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--line);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+  }
+
+  .info-line .label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .info-line strong { color: var(--ink); font-weight: 500; }
+
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    min-height: 46px;
+    padding: 0 34px;
+    border-radius: 999px;
+    background: var(--rose-deep);
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(165, 111, 111, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .nav-btn:hover { background: #976262; transform: translateY(-1px); }
+  .nav-btn:active { transform: scale(0.97); }
+  .nav-btn svg { width: 17px; height: 17px; flex: none; }
+
+  /* ---------- 结尾 ---------- */
+  .ending {
+    padding: 76px 28px 56px;
+    background: linear-gradient(180deg, var(--bg), var(--blush));
+  }
+
+  .ending-text {
+    font-size: 16px;
+    letter-spacing: 0.24em;
+    text-indent: 0.24em;
+    color: var(--ink);
+    line-height: 2.4;
+  }
+
+  .ending-names {
+    margin-top: 26px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    color: var(--rose-deep);
+  }
+
+  footer {
+    padding: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+  }
+
+  /* ---------- 入场动画 ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .scroll-hint svg { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 封面 -->
+  <header class="hero">
+    <div class="hero-frame" aria-hidden="true"></div>
+
+    <svg class="hero-botanical" width="120" height="72" viewBox="0 0 120 72" fill="none"
+      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+      <!-- 中间小花 -->
+      <circle cx="60" cy="26" r="4.5"/>
+      <path d="M60 21.5c-2-4 2-8 0-8s2 4 0 8zM60 30.5c-2 4 2 8 0 8s2-4 0-8zM55.5 26c-4-2-8 2-8 0s4-2 8 0zM64.5 26c4-2 8 2 8 0s-4-2-8 0z"/>
+      <!-- 左侧枝叶 -->
+      <path d="M48 34C36 40 24 42 12 40"/>
+      <path d="M40 36c-4-4-10-4-12-2 3 3 9 4 12 2zM32 39c-4-3-9-2-11 0 3 2 8 2 11 0zM24 40.5c-4-2-8-1-10 1 3 1.6 7 1 10-1z"/>
+      <!-- 右侧枝叶（镜像） -->
+      <path d="M72 34C84 40 96 42 108 40"/>
+      <path d="M80 36c4-4 10-4 12-2-3 3-9 4-12 2zM88 39c4-3 9-2 11 0-3 2-8 2-11 0zM96 40.5c4-2 8-1 10 1-3 1.6-7 1-10-1z"/>
+      <!-- 下垂小花苞 -->
+      <path d="M60 38v14"/>
+      <path d="M60 52c-3 2-3 6 0 8 3-2 3-6 0-8z"/>
+      <path d="M53 45c-3 1-4 4-3 6M67 45c3 1 4 4 3 6"/>
+    </svg>
+
+    <p class="hero-kicker">Wedding Invitation</p>
+    <h1 class="hero-names-en">Shaosong <span class="amp">&amp;</span> Mengying</h1>
+    <p class="hero-names">王少松 · 夏梦影</p>
+    <svg class="hero-heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21s-6.7-4.35-9.33-8.11C.8 10.2 1.87 6.5 4.9 5.4c1.9-.7 4.05-.1 5.35 1.4L12 8.6l1.75-1.8c1.3-1.5 3.45-2.1 5.35-1.4 3.03 1.1 4.1 4.8 2.23 7.49C18.7 16.65 12 21 12 21z"/>
+    </svg>
+    <p class="hero-date">2026 · 10 · 03</p>
+    <p class="hero-place">河南 · 登封</p>
+
+    <button class="scroll-hint" aria-label="向下滑动查看请柬内容" onclick="document.getElementById('words').scrollIntoView()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- 邀请词 -->
+  <section id="words">
+    <div class="reveal">
+      <svg class="floral-ring" width="150" height="150" viewBox="0 0 150 150" fill="none"
+        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="75" cy="75" r="52" stroke-dasharray="2 5" opacity="0.6"/>
+        <circle cx="75" cy="23" r="6"/>
+        <path d="M75 17c-2-4 2-8 0-8s2 4 0 8zM75 29c-2 4 2 8 0 8s2-4 0-8zM69 23c-4-2-8 2-8 0s4-2 8 0zM81 23c4-2 8 2 8 0s-4-2-8 0z"/>
+        <path d="M37 110c-8 2-14 0-16-3M113 110c8 2 14 0 16-3"/>
+        <path d="M30 104c-5-2-10-1-12 2M120 104c5-2 10-1 12 2"/>
+        <path d="M25 112a4 4 0 1 0 .01 0M125 112a4 4 0 1 0 .01 0"/>
+        <path d="M75 133c-2 3-2 7 0 9 2-2 2-6 0-9z"/>
+      </svg>
+      <p class="sec-kicker">To Our Dearest</p>
+      <h2 class="sec-title">诚挚邀请</h2>
+      <svg class="sec-divider" width="60" height="10" viewBox="0 0 60 10" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+        <path d="M2 5h20M38 5h20"/>
+        <circle cx="30" cy="5" r="2.6"/>
+      </svg>
+      <div class="words">
+        <p>山水一程，风雨一更。</p>
+        <p>我们想在这个秋天，<br>把最重要的一天，分享给最重要的你。</p>
+        <p>愿以爱之名，邀你见证<br>一场关于余生的约定。</p>
+        <p class="sign">王少松 · 夏梦影 敬邀</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新人介绍 -->
+  <section>
+    <div class="reveal">
+      <p class="sec-kicker">The Couple</p>
+      <h2 class="sec-title">关于新人</h2>
+      <svg class="sec-divider" width="60" height="10" viewBox="0 0 60 10" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+        <path d="M2 5h20M38 5h20"/>
+        <circle cx="30" cy="5" r="2.6"/>
+      </svg>
+
+      <article class="couple-card">
+        <div class="monogram" role="img" aria-label="新郎王少松的字母徽记">
+          <svg class="monogram-sprig tl" width="54" height="34" viewBox="0 0 54 34" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 30C16 22 32 14 50 8"/>
+            <path d="M14 26c-3-4-8-5-11-4 2 4 7 6 11 4zM24 21c-3-4-8-5-10-4 1.6 3.6 6 5.6 10 4zM34 16c-2.6-3.4-7-4.4-9-3.4 1.4 3.2 5.4 5 9 3.4z"/>
+          </svg>
+          <span class="monogram-ring" aria-hidden="true"></span>
+          <span class="monogram-letter">王</span>
+          <svg class="monogram-sprig br" width="54" height="34" viewBox="0 0 54 34" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 30C16 22 32 14 50 8"/>
+            <path d="M14 26c-3-4-8-5-11-4 2 4 7 6 11 4zM24 21c-3-4-8-5-10-4 1.6 3.6 6 5.6 10 4zM34 16c-2.6-3.4-7-4.4-9-3.4 1.4 3.2 5.4 5 9 3.4z"/>
+          </svg>
+        </div>
+        <div class="couple-info">
+          <h3 class="couple-name">王少松</h3>
+          <p class="couple-role">The Groom</p>
+          <p class="couple-quote">「余生很长，我只想和她慢慢走。」</p>
+        </div>
+      </article>
+
+      <article class="couple-card">
+        <div class="monogram" role="img" aria-label="新娘夏梦影的字母徽记">
+          <svg class="monogram-sprig tl" width="54" height="34" viewBox="0 0 54 34" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 30C16 22 32 14 50 8"/>
+            <path d="M14 26c-3-4-8-5-11-4 2 4 7 6 11 4zM24 21c-3-4-8-5-10-4 1.6 3.6 6 5.6 10 4zM34 16c-2.6-3.4-7-4.4-9-3.4 1.4 3.2 5.4 5 9 3.4z"/>
+          </svg>
+          <span class="monogram-ring" aria-hidden="true"></span>
+          <span class="monogram-letter">夏</span>
+          <svg class="monogram-sprig br" width="54" height="34" viewBox="0 0 54 34" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 30C16 22 32 14 50 8"/>
+            <path d="M14 26c-3-4-8-5-11-4 2 4 7 6 11 4zM24 21c-3-4-8-5-10-4 1.6 3.6 6 5.6 10 4zM34 16c-2.6-3.4-7-4.4-9-3.4 1.4 3.2 5.4 5 9 3.4z"/>
+          </svg>
+        </div>
+        <div class="couple-info">
+          <h3 class="couple-name">夏梦影</h3>
+          <p class="couple-role">The Bride</p>
+          <p class="couple-quote">「所有的刚刚好，都是遇见了他。」</p>
+        </div>
+      </article>
+
+      <div class="story" aria-label="我们的故事">
+        <div class="story-item reveal">
+          <p class="story-year">2019</p>
+          <p class="story-text">在嵩山下的一间小书店相遇，一本共同喜欢的书，开启了故事的第一页。</p>
+        </div>
+        <div class="story-item reveal">
+          <p class="story-year">2021</p>
+          <p class="story-text">一起走过许多城市，看过许多日落，确认了彼此就是对的人。</p>
+        </div>
+        <div class="story-item reveal">
+          <p class="story-year">2025</p>
+          <p class="story-text">颍河岸边，晚风里，一句「嫁给我好吗」，换来了一生的约定。</p>
+        </div>
+        <div class="story-item reveal">
+          <p class="story-year">2026</p>
+          <p class="story-text">我们结婚了。这一天，希望有你在场。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 倒计时 -->
+  <section class="countdown-sec" aria-label="婚礼倒计时">
+    <div class="reveal">
+      <p class="sec-kicker">Counting Down</p>
+      <h2 class="sec-title">幸福倒计时</h2>
+      <svg class="sec-divider" width="60" height="10" viewBox="0 0 60 10" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+        <path d="M2 5h20M38 5h20"/>
+        <circle cx="30" cy="5" r="2.6"/>
+      </svg>
+      <div class="countdown" id="countdown">
+        <div class="cd-cell"><p class="cd-num" id="cd-days">--</p><p class="cd-label">天</p></div>
+        <div class="cd-cell"><p class="cd-num" id="cd-hours">--</p><p class="cd-label">时</p></div>
+        <div class="cd-cell"><p class="cd-num" id="cd-mins">--</p><p class="cd-label">分</p></div>
+        <div class="cd-cell"><p class="cd-num" id="cd-secs">--</p><p class="cd-label">秒</p></div>
+      </div>
+      <p class="countdown-note" id="cd-note">距离我们的大日子还有</p>
+    </div>
+  </section>
+
+  <!-- 时间地点 -->
+  <section aria-label="婚礼时间与地点">
+    <div class="reveal">
+      <p class="sec-kicker">Time &amp; Place</p>
+      <h2 class="sec-title">婚礼邀请</h2>
+      <svg class="sec-divider" width="60" height="10" viewBox="0 0 60 10" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
+        <path d="M2 5h20M38 5h20"/>
+        <circle cx="30" cy="5" r="2.6"/>
+      </svg>
+      <div class="info-card">
+        <p class="info-date">2026.10.03</p>
+        <p class="info-date-cn">农历八月廿三 · 星期六 · 上午 10:08</p>
+        <p class="info-line">
+          <span class="label">仪式地点</span>
+          <strong>河南 · 登封</strong><br>
+          河南省郑州市登封市 · 宴席酒店待公布
+        </p>
+        <p class="info-line">
+          <span class="label">流程安排</span>
+          10:08 观礼仪式 · 11:30 合影留念 · 12:00 午宴开席
+        </p>
+        <a class="nav-btn" href="https://uri.amap.com/search?keyword=%E7%99%BB%E5%B0%81%E5%B8%82&city=410100" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/>
+            <circle cx="12" cy="10" r="2.6"/>
+          </svg>
+          导航前往
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结尾 -->
+  <section class="ending">
+    <div class="reveal">
+      <svg class="hero-heart" style="margin:0 auto 20px" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 21s-6.7-4.35-9.33-8.11C.8 10.2 1.87 6.5 4.9 5.4c1.9-.7 4.05-.1 5.35 1.4L12 8.6l1.75-1.8c1.3-1.5 3.45-2.1 5.35-1.4 3.03 1.1 4.1 4.8 2.23 7.49C18.7 16.65 12 21 12 21z"/>
+      </svg>
+      <p class="ending-text">秋风有信，佳期已定。<br>恭候光临，敬备喜筵。</p>
+      <p class="ending-names">Shaosong &amp; Mengying</p>
+    </div>
+  </section>
+
+  <footer>2026.10.03 · 登封 · 王少松 &amp; 夏梦影 敬邀</footer>
+</div>
+
+<script>
+  // 滚动入场动画
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('visible'));
+  }
+
+  // 婚礼倒计时
+  const target = new Date('2026-10-03T10:08:00+08:00').getTime();
+  const $d = document.getElementById('cd-days');
+  const $h = document.getElementById('cd-hours');
+  const $m = document.getElementById('cd-mins');
+  const $s = document.getElementById('cd-secs');
+  const $note = document.getElementById('cd-note');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      $d.textContent = $h.textContent = $m.textContent = $s.textContent = '00';
+      $note.textContent = '佳期已至，感谢你的祝福';
+      return false;
+    }
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor(diff % 86400000 / 3600000);
+    const mins = Math.floor(diff % 3600000 / 60000);
+    const secs = Math.floor(diff % 60000 / 1000);
+    $d.textContent = pad(days);
+    $h.textContent = pad(hours);
+    $m.textContent = pad(mins);
+    $s.textContent = pad(secs);
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+</script>
+</body>
+</html>
